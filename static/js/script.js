@@ -59,7 +59,7 @@ calculateButtonTwo.addEventListener('click', function() {
 // Reset button for both challenges
 for(var i = 0; i < resetButton.length; i++) {
     resetButton[i].addEventListener('click', function() {
-        this.parentNode.children[1].value = '';
-        this.parentNode.children[4].innerHTML = '';
+        this.parentNode.parentNode.children[1].value = '';
+        this.parentNode.parentNode.children[4].innerHTML = '';
     });
 }
