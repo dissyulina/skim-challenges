@@ -1,13 +1,14 @@
-// Declare variables from Challenge #1
+// Declare variables for Challenge #1
 let inputOne = document.getElementById("input1");
 let outputOne = document.getElementById("output1");
 let calculateButtonOne = document.getElementById("calculate-button1");
-let resetButtonOne = document.getElementById("reset-button1");
 
-// Declare variables from Challenge #2
+// Declare variables for Challenge #2
 let inputTwo = document.getElementById("input2");
 let outputTwo = document.getElementById("output2");
 let calculateButtonTwo = document.getElementById("calculate-button2");
+
+let resetButton = document.getElementsByClassName("reset-button");
 
 // Challenge #1 Functionality
 function multiplyByDecrement(input) {
@@ -26,11 +27,6 @@ calculateButtonOne.addEventListener('click', function() {
     } else {
         outputOne.innerHTML = "Please input an integer between 1 and 18"
     }
-})
-
-resetButtonOne.addEventListener('click', function() {
-    document.getElementById("input1").value = ''
-    outputOne.innerHTML = '';
 });
 
 // Challenge #2 Functionality
@@ -51,5 +47,19 @@ function skimLoop(input) {
 }
 
 calculateButtonTwo.addEventListener('click', function() {
-    outputTwo.innerHTML = skimLoop(inputTwo.value);
+    let inputValueTwo = Number(inputTwo.value);
+    // Validate input, has to be an integer
+    if (Number.isInteger(inputValueTwo)) {
+        outputTwo.innerHTML = skimLoop(inputTwo.value)
+    } else {
+        outputTwo.innerHTML = "Please input an integer"
+    }
 });
+
+// Reset button for both challenges
+for(var i = 0; i < resetButton.length; i++) {
+    resetButton[i].addEventListener('click', function() {
+        this.parentNode.children[1].value = '';
+        this.parentNode.children[4].innerHTML = '';
+    });
+}
