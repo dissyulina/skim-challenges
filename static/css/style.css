@@ -4,9 +4,19 @@ body {
     background-color: #e6f0f2;
 }
 
+p {
+    font-size: 14;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
 h1, h2 {
     color: #1c6d7d;
     text-align: center;
+    font-weight: 600px;
 }
 
 input {
@@ -15,21 +25,26 @@ input {
     border-radius: 5px;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .wrapper {
     border: 1px solid #1c6d7d;
-    margin: 2rem;
+    margin: 1rem;
     padding: 2rem;
     border-radius: 10px;
+    text-align: center;
+}
+
+.wrapper p {
+    text-align: left;
+    font-size: 0.875rem;
+}
+
+.wrapper input {
+    margin-top: 1rem;
+    width: 90%;
 }
 
 .btn-wrapper {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .btn {
@@ -48,4 +63,31 @@ input {
     color: #1c6d7d;
     border:#1c6d7d;
     margin-right: 1rem;
+}
+
+/* For screen bigger than 768 (tablets and up) */
+@media screen and (min-width: 769px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1320px;
+    }
+    .wrapper {
+        padding: 2rem 4rem;
+        margin: 2rem;
+    }
+    .wrapper input {
+        width: 70%;
+    }
+}
+
+/* For screen between 768px and 992px (tablets) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .wrapper {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    .wrapper input {
+        width: 80%;
+    }
 }

@@ -2,11 +2,13 @@
 let inputOne = document.getElementById("input1");
 let outputOne = document.getElementById("output1");
 let calculateButtonOne = document.getElementById("calculate-button1");
+let inputValidationOne = document.getElementById("input-validation1");
 
 // Declare variables for Challenge #2
 let inputTwo = document.getElementById("input2");
 let outputTwo = document.getElementById("output2");
 let calculateButtonTwo = document.getElementById("calculate-button2");
+let inputValidationTwo = document.getElementById("input-validation2");
 
 let resetButton = document.getElementsByClassName("reset-button");
 
@@ -25,7 +27,7 @@ calculateButtonOne.addEventListener('click', function() {
     if ((inputValue >= 1) && (inputValue <= 18) && (Number.isInteger(inputValue))) {
         outputOne.innerHTML = multiplyByDecrement(inputValue);
     } else {
-        outputOne.innerHTML = "Please input an integer between 1 and 18"
+        inputValidationOne.innerHTML = "Please input an integer between 1 and 18"
     }
 });
 
@@ -52,14 +54,15 @@ calculateButtonTwo.addEventListener('click', function() {
     if (Number.isInteger(inputValueTwo)) {
         outputTwo.innerHTML = skimLoop(inputTwo.value)
     } else {
-        outputTwo.innerHTML = "Please input an integer"
+        inputValidationTwo.innerHTML = "Please input an integer"
     }
 });
 
 // Reset button for both challenges
 for(var i = 0; i < resetButton.length; i++) {
     resetButton[i].addEventListener('click', function() {
-        this.parentNode.parentNode.children[1].value = '';
-        this.parentNode.parentNode.children[4].innerHTML = '';
+        this.parentNode.parentNode.children[2].value = '';
+        this.parentNode.parentNode.children[3].innerHTML = '';
+        this.parentNode.parentNode.children[6].innerHTML = '';
     });
 }

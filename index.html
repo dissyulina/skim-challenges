@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="static/css/style.css">
         <title>Hiring Challenges</title>
     </head>
@@ -16,9 +16,16 @@
         </header>
         <section>
             <div class="container">
-                <div class="wrapper">
+                <!-- Challenge One -->
+                <div class="wrapper" id="challenge-one">
                     <h2>Multiply by Decrement</h2>
-                    <input id="input1">
+                    <p>
+                        The input will be multiplied by itself minus 1, until it reaches 1. Example: <br>
+                        Input = 4 <br>
+                        Result = (4 * 3 * 2 * 1) = 24 <br>
+                    </p>
+                    <input id="input1" placeholder="Input an integer between 1 and 18">
+                    <p id="input-validation1"></p>
                     <div class="btn-wrapper">
                         <button class="reset-button btn btn-secondary">Reset</button>
                         <button id="calculate-button1" class="btn btn-primary">Calculate</button>
@@ -26,9 +33,16 @@
                     <p>Result: </p>
                     <p id="output1"></p>
                 </div>
-                <div class="wrapper">
+                <!-- Challenge Two -->
+                <div class="wrapper" id="challenge-two">
                     <h2>SKIM is A Great Place to Work!</h2>
-                    <input id="input2">
+                    <p>
+                        Loop through from the number 1 to the specified input. When the iteration is a multiple of 3, display 'SKIM'. When the iteration is multiple of 5, log 'is a great place to work!!. And when the iteration is multiple of 3 and 5, log 'SKIM is a great place to work!!'. Other than that, log the number. Example: <br>
+                        Input: 15 <br>
+                        Result: 1, 2, SKIM, 4, is a great place to work!!, SKIM, 7, 8, SKIM, is a great place to work!!, 11, SKIM, 13, 14, SKIM is a great place to work!!
+                    </p>
+                    <input id="input2" placeholder="Input an integer">
+                    <p id="input-validation2"></p>
                     <div class="btn-wrapper">
                         <button class="reset-button btn btn-secondary">Reset</button>
                         <button id="calculate-button2" class="btn btn-primary">Run Loop</button>
