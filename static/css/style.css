@@ -1,3 +1,4 @@
+/* Prefixed by https://autoprefixer.github.io */
 body {
     font-family: 'Montserrat', sans-serif;
     color: #3d4a4c;
@@ -61,6 +62,15 @@ input {
     margin-right: 1rem;
 }
 
+.btn-primary:hover {
+    background-color: #094a57;
+    border:#094a57;
+}
+
+.btn-secondary:hover {
+    background-color: #e7e7e7;
+}
+
 /* For screen bigger than 768 (tablets and up) */
 @media screen and (min-width: 769px) {
     .container {
@@ -74,6 +84,16 @@ input {
     }
     .wrapper input {
         width: 70%;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    h1 {
+        margin-bottom: 4rem;
     }
 }
 
