@@ -4,10 +4,6 @@ body {
     background-color: #e6f0f2;
 }
 
-p {
-    font-size: 14;
-}
-
 section {
     display: flex;
     justify-content: center;
@@ -16,7 +12,7 @@ section {
 h1, h2 {
     color: #1c6d7d;
     text-align: center;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 input {
